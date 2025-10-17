@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IframeTools</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>IframeTools</h1>
+    <input type="radio" id="frmIframeTag" checked>
+    <label for="frmIframeTag">Iframeタグから</label>
+    <input type="text" placeholder="iframeタグ" id="iframeInput" class="Input"><input type="button" value="Open" id="OpenBtnIframe"><br>
+    
+    <input type="radio" id="frmURL">
+    <label for="frmURL">URLから（非推奨）</label>
+    <input type="text" placeholder="URL" id="URLInput" class="Input" disabled><input type="button" value="Open" id="OpenBtnURL" disabled><br>
+    
+    <input type="checkbox" id="DoURLEncode">
+    <label for="DoURLEncode">URLをfrogie's arcade形式でデコードする</label><br>
+    <label for="title">ページのタイトル（任意）: </label>
+
+    <input type="text" placeholder="Iframe" id="title">
+    <div id="result">
+    </div>
+</body>
+</html>

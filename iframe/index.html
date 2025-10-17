@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            iframe {
+                height: 100vh !important;
+                width: 100vw !important;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+    <script>
+        const queryString = window.location.search;
+        const params = new URLSearchParams(queryString);
+        // let paramsArr = [];
+        // for (const key of params.keys()) {
+        //     paramsArr.push(key);
+        // }
+        // const firstPar = paramsArr[0];
+        // console.log(firstPar);
+        const iframeText = params.get('u');
+        console.log("U = " + iframeText);
+        const titleText = params.get('t');
+        console.log("T = " + titleText);
+        const div = document.createElement('div');
+        div.innerHTML = iframeText;
+        const iframe = div.firstChild;
+        document.title = titleText;
+        console.log(iframe);
+        if (iframe.tagName.toLowerCase() != "iframe"){
+            window.alert("指定されたURLでエラーが発生しました：タグがiframeではありません");
+        } else {    
+            document.body.appendChild(iframe);
+        }
+    </script>
+</html>

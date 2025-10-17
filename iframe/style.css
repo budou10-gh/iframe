@@ -1,0 +1,9 @@
+/* index.htmlがこれを参照しているわけではありません。 */
+body {
+    margin: 0;
+    padding: 0;
+}
+iframe {
+    height: 100vh !important;
+    width: 100vw !important;
+}
